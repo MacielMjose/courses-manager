@@ -33,7 +33,7 @@ var COURSES: courses[] = [
         code: 'DWQ-3412',
         rating: 3.5,
         price: 24.99,
-        imageUrl: 'src/assets/images/forms.png',
+        imageUrl: "/assets/images/forms.png",
     },
     {
         id: 3,
@@ -44,7 +44,7 @@ var COURSES: courses[] = [
         code: 'QPL-0913',
         rating: 4.0,
         price: 36.99,
-        imageUrl: '/home/maciel/courses-manager/src/assets/images/http.png',
+        imageUrl: "/assets/images/http.png",
     },
     {
         id: 4,
