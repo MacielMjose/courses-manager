@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { courses } from './courses';
+import { courseInfoComponent } from './course-info.component';
 
 @Injectable({
     providedIn: 'root'
@@ -9,7 +10,15 @@ import { courses } from './courses';
     retrieveAll():courses[]{
         return COURSES;
     }
-
+    retrieveById(id:number):courses{
+        return COURSES.find((courseIterator : courses)=>courseIterator.id == id);
+    }
+    save(courses: courses){
+        if(courses.id){
+            const index = COURSES.findIndex((courseIterator: courses)=>courseIterator.id ==courses.id);
+            COURSES[index] = courses;
+        }
+    }
 }
 
 var COURSES: courses[] = [

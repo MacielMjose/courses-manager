@@ -8,5 +8,4 @@ export class courses{
     rating:number;
     price:number;
     imageUrl:string;
-    
 }
