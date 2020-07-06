@@ -19,11 +19,15 @@ import { Observable } from 'rxjs';
     retrieveById(id:number):Observable<courses>{
         return this.httpClient.get<courses>(`${this.coursesUrl}/${id}`);
     }
-    save(courses: courses){
-        if(courses.id){
-            const index = COURSES.findIndex((courseIterator: courses)=>courseIterator.id ==courses.id);
-            COURSES[index] = courses;
+    save(course: courses):Observable<courses>{
+        if(course.id){
+            return this.httpClient.put<courses>(`${this.coursesUrl}/${course.id}`,course);
+        }else{
+            return this.httpClient.post<courses>(`${this.coursesUrl}`,course);
         }
+    }
+    deleteById(id: number):Observable<any> {
+        return this.httpClient.delete<any>(`${this.coursesUrl}/$(id)`);
     }
 }
 

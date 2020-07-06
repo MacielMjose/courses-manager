@@ -20,6 +20,9 @@ export class courseInfoComponent{
         });
     }
     save():void{
-        this.courseService.save(this.course);
+        this.courseService.save(this.course).subscribe({
+            next: course => console.log('saved with success',course),
+            error: err => console.log("erro",err)
+        })
     }
 }
