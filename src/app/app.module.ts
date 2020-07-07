@@ -1,7 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
+import {RouterModule, RouterOutlet} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import {navComponent} from 'src/app/nav-bar/nav-bar.component';
