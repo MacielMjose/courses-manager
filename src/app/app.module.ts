@@ -4,19 +4,19 @@ import { NgModule } from '@angular/core';
 import {RouterModule, RouterOutlet} from '@angular/router';
 
 import { AppComponent } from './app.component';
-import {navComponent} from 'src/app/nav-bar/nav-bar.component';
 import {error404Component} from 'src/app/erro-404/erro-404';
 import { CourseModule } from "src/app/courses/course.module";
+import { CoreModule } from "src/app/core/core.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    navComponent,
     error404Component
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
+    CoreModule,
+    HttpClientModule, 
     CourseModule,
     RouterModule.forRoot([
       {
